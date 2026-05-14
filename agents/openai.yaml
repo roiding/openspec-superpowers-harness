@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenSpec Superpowers Harness"
+  short_description: "Spec-first delivery with guarded implementation"
+  default_prompt: "Use $openspec-superpowers-harness to gather requirements, define the spec, and implement the project safely."
