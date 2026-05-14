@@ -246,6 +246,16 @@
 - `这个 bug 按 Route E 来做`
 - `先按这套 skill 帮我做需求澄清`
 
+## 示例调用
+
+适合直接复制的 prompt：
+
+- `用 openspec-superpowers-harness 帮我启动一个新项目，先按 full mode 做需求澄清。`
+- `按 openspec-superpowers-harness 的 core mode 帮我实现这个功能，先确认 scope 再动手。`
+- `这个线上 bug 按 openspec-superpowers-harness 的 Route E 来处理，先找根因，不要直接修。`
+- `按 openspec-superpowers-harness 帮我把这个需求整理成 proposal、spec、design、tasks。`
+- `这个任务比较大，请按 openspec-superpowers-harness 的 Route C 逐工件推进。`
+
 ## 当前状态
 
 - skill 已通过结构校验

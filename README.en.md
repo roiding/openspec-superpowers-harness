@@ -159,3 +159,13 @@ Repository files, identifiers, and code conventions should still follow the proj
 ## Sources
 
 See [sources.md](./references/sources.md).
+
+## Example prompts
+
+Copy-and-run examples:
+
+- `Use openspec-superpowers-harness to kick off this project in full mode and clarify requirements before implementation.`
+- `Use openspec-superpowers-harness in core mode to implement this feature, but confirm scope first.`
+- `Handle this production bug with openspec-superpowers-harness Route E and find the root cause before proposing a fix.`
+- `Use openspec-superpowers-harness to turn this request into proposal, spec, design, and tasks.`
+- `This is a larger change. Use openspec-superpowers-harness Route C and build the artifacts one by one.`
