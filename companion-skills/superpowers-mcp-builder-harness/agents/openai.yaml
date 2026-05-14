@@ -1,0 +1,4 @@
+interface:
+  display_name: "Superpowers MCP Builder Harness"
+  short_description: "Build MCP servers with harnessed discipline"
+  default_prompt: "Use $superpowers-mcp-builder-harness to design and implement an MCP server with strong validation and delivery guardrails."

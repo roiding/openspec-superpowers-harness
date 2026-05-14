@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenSpec Workspace Customization"
+  short_description: "Multi-repo planning and schema customization"
+  default_prompt: "Use $openspec-workspace-customization to coordinate multi-repo OpenSpec planning or customize OpenSpec schemas and tool mappings."

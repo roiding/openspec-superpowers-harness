@@ -1,0 +1,4 @@
+interface:
+  display_name: "Superpowers Skill Authoring Harness"
+  short_description: "Create and validate Codex skills rigorously"
+  default_prompt: "Use $superpowers-skill-authoring-harness to create or revise Codex skills with a test-driven documentation workflow."

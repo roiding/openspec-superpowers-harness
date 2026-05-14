@@ -52,6 +52,21 @@
 
 详细映射见 [full-workflow-matrix.md](./references/full-workflow-matrix.md)。
 
+## Companion skills
+
+这个仓库现在还包含 3 个可选 companion skills，位置在 [companion-skills](./companion-skills)：
+
+- `openspec-workspace-customization`
+- `superpowers-mcp-builder-harness`
+- `superpowers-skill-authoring-harness`
+
+它们被拆出去的原因不是“不重要”，而是**太专项，不适合默认和主 skill 一起加载**。
+
+注意：
+
+这些 companion 虽然在同一个仓库里，但**不会因为主 skill 已安装就被自动发现**。
+如果你要使用某个 companion，需要把对应子目录单独复制或链接到 Codex 的 skills 目录中，作为独立 skill 安装。
+
 ## 默认语言策略
 
 这个 skill 默认用中文协作：
@@ -183,6 +198,11 @@
 
 - 这些能力是“专门用途”，不是每次项目开发都该默认激活
 - 如果一股脑并入，会让主 skill 触发范围过宽、判断变钝
+
+其中这次已经进一步处理了两类高价值专项能力：
+
+- `mcp-builder` → 拆成 companion：`superpowers-mcp-builder-harness`
+- `writing-skills` → 拆成 companion：`superpowers-skill-authoring-harness`
 
 ### 4. 与当前上位指令冲突或需要降级适配的内容
 
