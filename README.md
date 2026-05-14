@@ -85,10 +85,15 @@
 
 ```text
 .
+├── CHANGELOG.md
 ├── SKILL.md
+├── VERSION
 ├── README.md
+├── README.en.md
 ├── agents/
 │   └── openai.yaml
+├── companion-skills/
+├── scripts/
 └── references/
     ├── agents-bootstrap.md
     ├── full-workflow-matrix.md
@@ -103,6 +108,57 @@
 - `SKILL.md`：主技能定义
 - `agents/openai.yaml`：UI/入口元数据
 - `references/`：按需加载的辅助规则，不把所有内容一次塞进上下文
+- `companion-skills/`：拆分出来的专项技能
+- `scripts/install-skills.ps1`：Windows 安装脚本
+
+## 版本
+
+当前版本见 [VERSION](./VERSION)。
+变更记录见 [CHANGELOG.md](./CHANGELOG.md)。
+
+## 安装
+
+### 方式 1：手动安装主 skill
+
+如果这个仓库本身就位于你的 Codex skills 目录下，例如：
+
+`C:\Users\<你>\.codex\skills\openspec-superpowers-harness`
+
+那么主 skill 已经处于可发现位置。
+
+### 方式 2：用脚本安装主 skill 和 companion skills
+
+Windows PowerShell：
+
+```powershell
+Set-ExecutionPolicy -Scope Process Bypass
+.\scripts\install-skills.ps1
+```
+
+安装主 skill + 指定 companion：
+
+```powershell
+Set-ExecutionPolicy -Scope Process Bypass
+.\scripts\install-skills.ps1 `
+  -Companions openspec-workspace-customization,superpowers-mcp-builder-harness
+```
+
+默认使用 `Junction` 模式。
+如果你不想创建链接，也可以改成复制：
+
+```powershell
+.\scripts\install-skills.ps1 -Mode Copy
+```
+
+默认安装到：
+
+`C:\Users\<你>\.codex\skills`
+
+也可以自定义目标目录：
+
+```powershell
+.\scripts\install-skills.ps1 -DestinationPath "D:\my-skills"
+```
 
 ## 已整合的内容
 

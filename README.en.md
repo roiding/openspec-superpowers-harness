@@ -9,6 +9,10 @@ An integrated Codex skill that combines three layers into one delivery workflow:
 This repository is **not** a mirror of OpenSpec or superpowers.
 It is an adaptation for the current Codex environment.
 
+## Versioning
+
+See [VERSION](./VERSION) for the current version and [CHANGELOG.md](./CHANGELOG.md) for release history.
+
 ## Goal
 
 When Codex is asked to build a project, the intended default behavior is:
@@ -145,6 +149,44 @@ Important:
 
 Nested companion folders are **not automatically discovered** just because the main skill is installed.
 To use a companion, install that companion folder as its own skill folder in your Codex skills directory.
+
+## Installation
+
+### If this repository already lives inside your Codex skills directory
+
+For example:
+
+`C:\Users\<you>\.codex\skills\openspec-superpowers-harness`
+
+then the main skill is already in a discoverable location.
+
+### Scripted installation on Windows
+
+Use the included PowerShell installer:
+
+```powershell
+Set-ExecutionPolicy -Scope Process Bypass
+.\scripts\install-skills.ps1
+```
+
+Install the main skill plus selected companions:
+
+```powershell
+Set-ExecutionPolicy -Scope Process Bypass
+.\scripts\install-skills.ps1 `
+  -Companions openspec-workspace-customization,superpowers-mcp-builder-harness
+```
+
+The default install mode is `Junction`.
+To copy files instead:
+
+```powershell
+.\scripts\install-skills.ps1 -Mode Copy
+```
+
+The default destination is:
+
+`C:\Users\<you>\.codex\skills`
 
 ## Default language policy
 
